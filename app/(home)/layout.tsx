@@ -16,11 +16,11 @@ export default async function MarketingLayout({
   return (
     <>
       <div className="flex min-h-screen flex-col">
-        <header className="container z-40 bg-background">
+        <div className="container z-40 bg-background">
           <div className="flex h-20 items-center justify-between py-6">
             <MainNav items={marketingConfig.mainNav} />
             <nav>
-              <div className="flex gap-4 items-center">
+              <div className="flex items-center gap-4">
                 <ModeToggle />
                 <Link
                   href="/login"
@@ -34,7 +34,7 @@ export default async function MarketingLayout({
               </div>
             </nav>
           </div>
-        </header>
+        </div>
         <main className="flex-1">{children}</main>
       </div>
     </>
