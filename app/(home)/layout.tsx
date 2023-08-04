@@ -4,6 +4,7 @@ import { marketingConfig } from "@/config/marketing"
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
 import { MainNav } from "@/components/main-nav"
+import { ModeToggle } from "@/components/mode-toggle"
 
 interface MarketingLayoutProps {
   children: React.ReactNode
@@ -18,15 +19,18 @@ export default async function MarketingLayout({
         <div className="flex h-20 items-center justify-between py-6">
           <MainNav items={marketingConfig.mainNav} />
           <nav>
-            <Link
-              href="/login"
-              className={cn(
-                buttonVariants({ variant: "secondary", size: "sm" }),
-                "px-4"
-              )}
-            >
-              Login
-            </Link>
+            <div className="flex gap-4 items-center">
+              <ModeToggle />
+              <Link
+                href="/login"
+                className={cn(
+                  buttonVariants({ variant: "secondary", size: "sm" }),
+                  "px-4"
+                )}
+              >
+                Login
+              </Link>
+            </div>
           </nav>
         </div>
       </header>
