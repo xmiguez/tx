@@ -20,6 +20,13 @@ export function MainNav() {
         >
           Articulos
         </Link>
+        <Link
+          key=""
+          href="/contactanos"
+          className="flex items-center text-lg font-medium transition-colors hover:text-foreground/80 sm:text-sm"
+        >
+          Contacto
+        </Link>
       </nav>
     </div>
   )

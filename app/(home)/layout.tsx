@@ -1,13 +1,7 @@
 import { MainNav } from "@/components/main-nav"
 import { ModeToggle } from "@/components/mode-toggle"
 
-interface MarketingLayoutProps {
-  children: React.ReactNode
-}
-
-export default async function MarketingLayout({
-  children,
-}: MarketingLayoutProps) {
+export default async function MarketingLayout({ children }) {
   return (
     <div className="flex flex-col">
       <header className="z-40 bg-background px-7 lg:px-32">
@@ -16,7 +10,7 @@ export default async function MarketingLayout({
           <ModeToggle />
         </div>
       </header>
-      <main className="flex-1">{children}</main>
+      <main>{children}</main>
     </div>
   )
 }
