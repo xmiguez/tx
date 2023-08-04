@@ -14,27 +14,29 @@ export default async function MarketingLayout({
   children,
 }: MarketingLayoutProps) {
   return (
-    <div className="flex min-h-screen flex-col">
-      <header className="container z-40 bg-background">
-        <div className="flex h-20 items-center justify-between py-6">
-          <MainNav items={marketingConfig.mainNav} />
-          <nav>
-            <div className="flex gap-4 items-center">
-              <ModeToggle />
-              <Link
-                href="/login"
-                className={cn(
-                  buttonVariants({ variant: "secondary", size: "sm" }),
-                  "px-4"
-                )}
-              >
-                Login
-              </Link>
-            </div>
-          </nav>
-        </div>
-      </header>
-      <main className="flex-1">{children}</main>
-    </div>
+    <>
+      <div className="flex min-h-screen flex-col">
+        <header className="container z-40 bg-background">
+          <div className="flex h-20 items-center justify-between py-6">
+            <MainNav items={marketingConfig.mainNav} />
+            <nav>
+              <div className="flex gap-4 items-center">
+                <ModeToggle />
+                <Link
+                  href="/login"
+                  className={cn(
+                    buttonVariants({ variant: "secondary", size: "sm" }),
+                    "px-4"
+                  )}
+                >
+                  Login
+                </Link>
+              </div>
+            </nav>
+          </div>
+        </header>
+        <main className="flex-1">{children}</main>
+      </div>
+    </>
   )
 }
